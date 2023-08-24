@@ -24,16 +24,15 @@ public class TestController {
     }
 
 
-    @GetMapping("/mod")
-    @PreAuthorize("hasRole('MODERATOR')")
-    public String moderatorAccess() {
-        return "Moderator Board.";
-    }
-
-    @GetMapping("/all")
-    public String allAccess() {
-      
-        return "Public Content Modified.";
-    }
-
+  @GetMapping("/mod")
+  @PreAuthorize("hasRole('MODERATOR')")
+  public String moderatorAccess() {
+    return "Moderator Board.";
+  }
+ @GetMapping("/all")
+  public String allAccess() {
+        System.out.println("test");
+    return "Public Content Modified.";
+  }
+ 
 }
