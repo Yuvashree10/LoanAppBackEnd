@@ -31,6 +31,7 @@ public class TestController {
   }
  @GetMapping("/all")
   public String allAccess() {
+        System.out.println("test");
     return "Public Content Modified.";
   }
  
